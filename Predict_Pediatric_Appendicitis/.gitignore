@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+
+
+# Flask
+instance/
+*.db
+*.sqlite3
+
+# Build and artifacts
+/build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+/myenv
+
+# Static files
+/static/css/*.css
+/static/js/*.js
+/static/images/*
+/predictions
+/prediction_artifacts
+/logs
+/constant
+/upload_data.py

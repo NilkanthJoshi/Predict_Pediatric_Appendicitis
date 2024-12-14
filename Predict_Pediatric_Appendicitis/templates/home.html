@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pediatric Appendicitis Detection</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_home.css') }}"
+    />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="container">
+        <h1 class="welcome-title">
+          Welcome to Pediatric Appendicitis Detection
+        </h1>
+        <form action="{{ url_for('predict_route') }}" method="GET">
+          <button type="submit" class="btn">Predict Now</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="flex-container">
+        <section class="info-section">
+          <h2>What is Appendicitis?</h2>
+          <p>
+            Appendicitis is an inflammation of the appendix, a small pouch that
+            protrudes from the large intestine. It is considered a medical
+            emergency that requires immediate attention, especially in children
+            and young adults.
+          </p>
+          <h3>Causes of Appendicitis:</h3>
+          <p>Appendicitis can be caused by various factors, including:</p>
+          <ul>
+            <li>
+              Blockage of the appendix due to stool, a foreign body, or cancer.
+            </li>
+            <li>Infection from a gastrointestinal virus or bacteria.</li>
+            <li>Inflammation due to inflammatory bowel disease.</li>
+          </ul>
+          <h3>Key Attributes:</h3>
+          <ul>
+            <li>
+              Commonly occurs in children and young adults, although it can
+              affect anyone.
+            </li>
+            <li>
+              Symptoms include abdominal pain, loss of appetite, nausea,
+              vomiting, and fever.
+            </li>
+            <li>
+              If untreated, it can lead to serious complications, such as a
+              ruptured appendix or peritonitis.
+            </li>
+          </ul>
+          <p>
+            Understanding these attributes can help in early detection and
+            prompt treatment, improving outcomes for patients.
+          </p>
+        </section>
+
+        <section class="symptom-checker">
+          <h2>Check Common Symptoms</h2>
+          <p>Unsure if it's appendicitis? Review the key symptoms below:</p>
+          <ul class="symptom-list">
+            <li>
+              <span class="icon">&#x2714;</span> Abdominal pain (usually
+              starting around the navel and moving to the lower right side)
+            </li>
+            <li>
+              <span class="icon">&#x2714;</span> Nausea or vomiting, often
+              following the abdominal pain
+            </li>
+            <li>
+              <span class="icon">&#x2714;</span> Fever, often mild but can be
+              higher in serious cases
+            </li>
+            <li>
+              <span class="icon">&#x2714;</span> Loss of appetite and inability
+              to eat
+            </li>
+            <li>
+              <span class="icon">&#x2714;</span> Diarrhea or constipation,
+              depending on the individual
+            </li>
+          </ul>
+          <p>
+            These symptoms may vary from person to person, and not all symptoms
+            need to be present for appendicitis to be a concern.
+          </p>
+          <p>
+            If you or someone you know is experiencing these symptoms, seek
+            medical attention immediately.
+          </p>
+        </section>
+
+        <section class="train-section">
+          <h2>Train Your AI Model</h2>
+          <p>
+            Ready to enhance the detection capabilities of our AI model?
+            Training the model is crucial for improving its accuracy in
+            predicting appendicitis based on symptoms and patient history.
+          </p>
+          <h3>Why Train the Model?</h3>
+          <p>
+            A well-trained model can help healthcare providers make better
+            decisions and improve patient outcomes by:
+          </p>
+          <ul>
+            <li>
+              Incorporating a wider range of data for more accurate predictions.
+            </li>
+            <li>
+              Learning from historical cases to identify patterns and trends.
+            </li>
+            <li>
+              Reducing the time to diagnosis, which is critical in emergencies.
+            </li>
+          </ul>
+          <p>
+            This training process may take a few minutes, depending on the
+            amount of data being processed. Click the button below to start the
+            training process.
+          </p>
+          <form action="{{ url_for('train_route') }}" method="GET">
+            <button type="submit" class="btn animated-btn">
+              Start Training
+            </button>
+          </form>
+          {% if message %}
+          <div class="message">{{ message }}</div>
+          {% endif %}
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Pediatric Appendicitis Detection. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

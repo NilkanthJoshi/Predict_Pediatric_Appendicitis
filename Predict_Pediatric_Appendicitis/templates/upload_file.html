@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regensburg Pediatric Appendicitis Detection</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <button onclick="history.back()" class="back-btn">⬅ Home</button>
+      <h2>Drop a CSV file to make predictions</h2>
+    </nav>
+
+    <!-- File Upload Form -->
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <div class="frame">
+        <div class="center">
+          <div class="title">
+            <h2>Upload File</h2>
+          </div>
+
+          <!-- Dropzone for file upload -->
+          <div class="dropzone">
+            <img
+              src="http://100dayscss.com/codepen/upload.svg"
+              class="upload-icon"
+              alt="Upload Icon"
+            />
+            <input
+              type="file"
+              class="upload-input"
+              name="file"
+              accept=".csv"
+              required
+            />
+          </div>
+
+          <!-- Submit button for the form -->
+          <button type="submit" class="btn" name="uploadbutton">
+            Upload File
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Include any necessary JS (optional) -->
+    <script src="https://100dayscss.com/codepen/js/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
